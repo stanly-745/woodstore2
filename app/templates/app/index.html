@@ -1,0 +1,89 @@
+{% extends 'app/main.html' %}
+
+{% block content %}
+{% include 'app/status.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card card-body">
+                <h5> Customers   : <button type="button" class="btn btn-primary w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Add
+                  </button></h5><hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Place</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="" class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View</a></td>
+                            <td>Stanly</td>
+                            <td>Kaduvetti</td>
+                            
+                        </tr>
+                        <tr>
+                            <td><a href="" class="btn btn-outline-primary btn-sm">View</a></td>
+                            <td>Sam</td>
+                            <td>Kaduvetti</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-body">
+                <h5> Workers   : <button type="button" class="btn btn-primary w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add</button></h5><hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Place</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="" class="btn btn-outline-primary btn-sm">View</a></td>
+                            <td>Sam</td>
+                            <td>Kaduvetti</td>
+                        </tr>
+                        <tr>
+                            <td><a href="" class="btn btn-outline-primary btn-sm">View</a></td>
+                            <td>Stanly</td>
+                            <td>Kaduvetti</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <strong class="p-3">Name : </strong><input class="mb-2" type="text"><br>
+           <strong class="p-3">Place : </strong><input class="mb-2" type="text">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
