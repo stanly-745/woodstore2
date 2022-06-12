@@ -5,8 +5,22 @@ from django.urls import path
 # urls
 urlpatterns=[
     path('',views.home,name='home'),
-    path('stockin',views.stock_in,name='stockin'),
-    path('stockout',views.stock_out,name='stockout'),
-    path('no-order',views.no_order,name='no_order'),
-    path('payment_pending',views.payment_pending,name='payment_pending'),
+    path('customer/<str:pk>/',views.customer,name='customer'),
+    path('worker/<str:pk>/',views.worker,name='worker'),
+    path('stockin',views.stock,name='stock'),
+    path('order_history',views.order_history,name='order-his'),
+    path('products',views.product,name='product'),
+    path('order',views.order,name='order'),
+    path('addcustomer',views.customerform,name='addcustomer'),
+    path('addworker',views.workerform,name='addworker'),
+    path('addproduct',views.productform,name='addproduct'),
+    path('addstock',views.stockform,name='addstock'),
+    path('addorder',views.orderform,name='addorder'),
+    path('update-order/<str:pk>/',views.update_order,name='up-order'),
+    path('update-stock/<str:pk>/',views.update_stock,name='up-stock'),
+    path('bill/add/',views.billgeneration,name='bill-add'),
+    path('bill/sum/<int:pk>',views.calcsum,name='calc-sum'),
+    path('bill/<int:pk>',views.billdetail,name='bill-detail'),
+    path('add-product-in-bill/<int:pk>/',views.bill_prod_add,name='add-bill-product'),
+    path('expence/',views.expense,name='expence')
 ]

@@ -1,56 +1,62 @@
 <div class="container pt-4">
     <div class="row ">
+      <!-- Payment pending -->
         <div class=" col-6 col-lg-3 ">
-            <div class="card bg-info text-white text-center mb-3">
+            <div class="card bg-info text-white text-center mb-3 disabled">
             <div class="card-body">
-              <h5 class="card-title">Payment Pending</h5><hr>
-              <a href="{% url 'payment_pending' %}" class="text-decoration-none text-white"><h1 class="card-text">10</h1></a>
+              <h5 class="card-title">Bill</h5><hr>
+              <a href=" {% url 'bill-add' %} " class="text-decoration-none text-white"><h1 class="card-text">{{bill}}</h1></a>
             </div>
           </div>
         </div>
+        <!-- Number of orders -->
         <div class=" col-6 col-lg-3">
             <div class="card bg-info text-white text-center mb-3">
                 <div class="card-body">
                   <h5 class="card-title">Number of order</h5><hr>
-                <a href="{% url 'no_order' %}" class="text-decoration-none text-white"><h1 class="card-text">30</h1></a>  
+                <a href="{% url 'order' %}" class="text-decoration-none text-white"><h1 class="card-text">{{pending_order}}</h1></a>  
                 </div>
               </div>
         </div>
+        <!-- Stock In -->
         <div class="col-6 col-lg-3">
             <div class="card bg-info text-white text-center mb-3">
                 <div class="card-body">
-                  <h5 class="card-title">Stock In</h5><hr>
-                  <a href="{% url 'stockin' %}" class="text-decoration-none text-white"><h1 class="card-text">1</h1></a>
+                  <h5 class="card-title">Stock</h5><hr>
+                  <a href="{% url 'stock' %}" class="text-decoration-none text-white"><h1 class="card-text ">{{stock}} </h1></a>
                 </div>
               </div>
         </div>
+        <!-- Out of stock -->
         <div class="col-6 col-lg-3">
             <div class="card bg-info text-white text-center mb-3">
                 <div class="card-body">
-                  <h5 class="card-title">Stock Out</h5><hr>
-                  <a href=" {% url 'stockout' %} " class="text-decoration-none text-white"><h1 class="card-text">1</h1></a>
+                  <h5 class="card-title">Order history</h5><hr>
+                  <a href=" {% url 'order-his' %} " class="text-decoration-none text-white"><h1 class="card-text">{{no_order}}</h1></a>
                 </div>
               </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 ">
+          <!-- Monthly expense -->
+            <div class="col-sm ">
                 <div class="card bg-secondary text-white text-center mb-3">
                     <div class="card-bod">
-                        <div class="card-title"><h5>Monthly expense</h5><hr>
-                            <a href="" class="text-decoration-none text-white"><h1 class="card-text">100000</h1></a>
+                        <div class="card-title"><h5>Monthly expense</h5>
+                            <a href="" class="text-decoration-none text-white"><h1 class="card-text"></h1></a>
                         </div>
                     </div>
-                    </div>
                 </div>
-                <div class="col-sm-6 ">
+            </div>
+            <!-- Monthly income -->
+                <div class="col-sm ">
                     <div class="card bg-secondary text-white text-center mb-3">
                         <div class="card-bod">
-                            <div class="card-title"><h5>Monthly Income</h5><hr>
-                                <a href="" class="text-decoration-none text-white"><h1 class="card-text">50000</h1></a>
+                            <div class="card-title"><h5>Monthly Income</h5>
+                                <a href="" class="text-decoration-none text-white"><h1 class="card-text"></h1></a>
                             </div>
                         </div>
                         </div>
-                    </div>
+                </div>
 </div>
 </div>
 </div>

@@ -1,0 +1,16 @@
+{% extends 'app/main.html' %}
+{% block content %}
+
+<div class="container">
+    <p class="display-4">Add Stock :</p>
+    <form action="" method="POST">
+        {%csrf_token%}
+        <table class="table">
+            {{form}}
+            
+        </table>
+        <input type="submit" class="btn btn-outline-success">
+    </form>
+</div>
+
+{% endblock %}

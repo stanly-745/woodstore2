@@ -1,0 +1,46 @@
+{% extends 'app/main.html' %}
+		{% block content %}
+		<div class="container bg-white">
+			<h1>Customer Name: {{bill.customer_name}}</h1>
+			<a href="{{bill.add_product}}"><button>Add product</button></a><br><br>
+			<table class="table table-striped">
+				<br>
+				<thead class="table-dark">
+				<tr>
+					<th>Products</th>
+					<th>Quantity</th>
+					<th></th>
+					<th>Price</th>
+				</tr>
+			</thead>
+				{% for product in products %}
+				<tr>
+					<td><b> {{ product.billprod.name }}</b></td>
+					<td>{{ product.quantity }}</td>
+					<td></td>
+					<td>{{ product.billprod.price }}</td>
+				</tr>
+				{% endfor %}
+				<tr>
+					<td><b>GST</b> </td>
+					<td></td>
+					<td></td>
+					<td>5</td>
+			
+				</tr>
+				<tr>
+					<td>
+						<b>Total Amount</b>
+					</td>
+					<td></td>
+					<td></td>
+					
+					<td>
+						{{bill.total_sum}}
+					</td>
+				</tr>
+			</table><br>
+			
+			<a href="{% url 'bill-add' %}" class="btn btn-info">New Bill</a> 
+		</div>
+        {% endblock %}
