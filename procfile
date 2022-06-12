@@ -1,1 +1,1 @@
-web:gunicorn woodstore2.wsgi
+web: gunicorn woodstore2.wsgi
